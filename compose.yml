@@ -1,0 +1,19 @@
+version: "3"
+services:
+  linked-list:
+    container_name: tests
+    build: .
+    tty: true
+    volumes:
+      - .:/app
+    profiles:
+      - test
+    depends_on:
+      - composer
+    command: /app/vendor/bin/phpunit --bootstrap /app/tests/bootstrap.php /app/tests
+
+  composer:
+    image: composer:2.6.5
+    command: ["composer", "install"]
+    volumes:
+      - .:/app

@@ -1,0 +1,17 @@
+{
+    "name": "courtier/linked-list",
+    "description": "library providing LinkedList",
+    "type": "library",
+    "license": "FOSS",
+    "minimum-stability": "stable",
+	"autoload": {
+        "psr-4": {"Courtier\\LinkedList\\": "src/"}
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "mockery/mockery": "^1.3"
+    }
+}
